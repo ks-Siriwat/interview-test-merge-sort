@@ -1,3 +1,15 @@
+function main() {
+    const [c1, c2, c3] = process.argv.slice(2);
+
+    const collection_1 = JSON.parse(c1) as number[];
+    const collection_2 = JSON.parse(c2) as number[];
+    const collection_3 = JSON.parse(c3) as number[];
+
+    const result = merge(collection_1, collection_2, collection_3);
+    console.log(result);
+}
+main();
+
 export function merge(collection_1: number[], collection_2: number[], collection_3: number[]): number[] {
     // collection_1 already sorted from max to min
     // collection_2, collection_3 already sorted from min(0) to max
